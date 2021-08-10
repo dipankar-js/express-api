@@ -1,5 +1,6 @@
 const express = require('express')
 const todoRouter = require('./routes/todo.route');
+const authRouter = require('./routes/auth.route');
 
 const app = express()
 
@@ -10,6 +11,7 @@ app.use(express.json())
 // http://localhost:3000/api/todo
 
 app.use('/api/todo', todoRouter);
+app.use('/api/auth', authRouter);
 
 const PORT = 3000;
 
